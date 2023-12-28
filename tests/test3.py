@@ -1,4 +1,4 @@
-# Test Case 3: Import mod2.py
+
 
 from mypkg.mod1 import sub,func
 import unittest
