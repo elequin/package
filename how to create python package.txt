@@ -1,0 +1,49 @@
+Python package:-
+        a. Python package is nothing but a group of python modules,  
+        b. Every python package has a __init__.py file , only after creation of __init__.py file python interpreter 
+        recognizes the folder as a python package 
+
+
+Example:
+        1.Create a folder called mypkg , inside, create another folder mypkg
+        2.Create a __init__.py file 
+        3.Create a mod1.py file inside of inner mypkg folder, and a function which returns the difference between two integers
+        4.Create a mod2.py file inside of inner mypkg folder, and a function which returns the sum of two integers
+        5.Import is a keyword in python used to access other file classes,functions..etc. 
+        6.Now if we want to access the function in mod1.py file , we can simply add this statement to our file "from mod1 import sub"
+        similarly, we use "from mod2 import add"  to access add function  
+        7.We can create any number of such modules.
+        8.Create a setup.py file to configure metadata about package 
+
+
+Installation of requirements:-
+        1. Wheel package 
+        2. Setuptools package
+
+        Wheel is a binary distribution,its a standard for packaging and distribution of python projects
+        command :- pip install wheel
+
+        Setuptools is a library in Python that facilitates the packaging, distribution, and installation
+        of Python projects.
+        command:- pip install setuptools
+
+        Create a wheel distribution of a python package 
+        3.python setup.py bdist_wheel 
+
+If different directories:-
+        1.If the package and working directory are different 
+
+        Command to install package 
+        a. pip install 'path/to/python package'
+
+Usage of package:-        
+
+        mypkg=package , mod1=module
+        
+        Model command :- from package.module import function
+        
+        [By using above command we can import the required function from module]
+        example command:-  from mypkg.mod1 import sub
+
+
+
