@@ -1,51 +1,42 @@
-# Test case2: Importing  mod2 module
 
-from mypkg.mod2 import sqr, add, divs
 
+from mypkg.mod1 import sub,func
 import unittest
 
-def add(a, b):
-    c = a + b
+def sub(a, b):
+    c = a - b
     return c
 
-def sqr(a):
-    c = a ** 2
-    return c
-
-def divs(a, b):
-    c = a / b
-    return c
-
+def func(l):
+    if len(l)==0:
+        return 0
+    else:
+        return l.count(min(l))
 class TestMyFunctions(unittest.TestCase):
 
-    def test_add_positive_numbers(self):
-        result = add(5, 3)
-        self.assertEqual(result, 8, "Addition of positive numbers failed")
+    def test_sub_positive_numbers(self):
+        result = sub(5, 2)
+        self.assertEqual(result, 3, "Subtraction of positive numbers failed")
 
-    def test_add_negative_numbers(self):
-        result = add(-5, 3)
-        self.assertEqual(result, -2, "Addition of negative and positive numbers failed")
+    def test_sub_negative_numbers(self):
+        result = sub(-5, -2)
+        self.assertEqual(result, -3, "Subtraction of negative numbers failed")
 
-    def test_sqr_positive_number(self):
-        result = sqr(4)
-        self.assertEqual(result, 16, "Square of a positive number failed")
+    def test_sub_mixed_numbers(self):
+        result = sub(5, -2)
+        self.assertEqual(result, 7, "Subtraction of mixed numbers failed")
 
-    def test_sqr_negative_number(self):
-        result = sqr(-3)
-        self.assertEqual(result, 9, "Square of a negative number failed")
+    def test_func_empty_list(self):
+        result = func([])
+        self.assertEqual(result, 0, "Function with an empty list failed")
 
-    def test_divs_integer_division(self):
-        result = divs(10, 2)
-        self.assertEqual(result, 5, "Integer division failed")
+    def test_func_single_element_list(self):
+        result = func([7,2])
+        self.assertEqual(result, 1, "Function with a single-element list failed")
 
-    def test_divs_float_division(self):
-        result = divs(7, 3)
-        self.assertAlmostEqual(result, 2.333, places=3, msg="Float division failed")
-
-    def test_divs_divide_by_zero(self):
-        with self.assertRaises(ZeroDivisionError):
-            divs(5, 0)
+    def test_func_multiple_element_list(self):
+        result = func([3, 1, 2, 3, 1, 3])
+        self.assertEqual(result, 2, "Function with multiple-element list failed")
 
 if __name__ == '__main__':
     unittest.main()
-    
