@@ -7,6 +7,8 @@ def sqr(a):
     return c
 
 def divs(a,b):
-    c=a/b
-    return c
-
+    try:
+        c=a/b
+        return c
+    except ZeroDivisionError as e:
+        return ("an error occured", e)

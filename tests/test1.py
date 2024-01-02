@@ -4,18 +4,6 @@ from mypkg.mod2 import sqr, add, divs
 
 import unittest
 
-def add(a, b):
-    c = a + b
-    return c
-
-def sqr(a):
-    c = a ** 2
-    return c
-
-def divs(a, b):
-    c = a / b
-    return c
-
 class TestMyFunctions(unittest.TestCase):
 
     def test_add_positive_numbers(self):

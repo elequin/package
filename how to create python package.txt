@@ -45,5 +45,7 @@ Usage of package:-
         [By using above command we can import the required function from module]
         example command:-  from mypkg.mod1 import sub
 
+        From above example command the user can use sub function of mod1.py 
+
 
 
