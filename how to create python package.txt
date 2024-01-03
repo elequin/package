@@ -17,15 +17,11 @@ Example:
 
 
 Installation of requirements:-
-        1. Wheel package 
-        2. Setuptools package
+        1. Wheel package :- Wheel is a binary distribution,its a standard for packaging and distribution
+        of python projects
 
-        Wheel is a binary distribution,its a standard for packaging and distribution of python projects
-        command :- pip install wheel
-
-        Setuptools is a library in Python that facilitates the packaging, distribution, and installation
-        of Python projects.
-        command:- pip install setuptools
+        2. Setuptools package :- Setuptools is a library in Python that facilitates the packaging,
+        distribution, and installation of Python projects.
 
         Create a wheel distribution of a python package 
         3.python setup.py bdist_wheel 
