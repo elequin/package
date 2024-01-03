@@ -7,23 +7,21 @@ mypkg
 Create a Python package which  contains code that can be reusable, portable , can be called from anywhere 
 after importing the package and its modules.
 
-### Requirements
+### Requirements.
+In mypkg directory setup.py file containes install_requires list , required packages  will be stored  here 
+
+In this mypkg package, the required packages are 1.wheel 2.setuptools 
+
 1.Wheel package 
-
-You can install the package using `pip`:
-Here, pip means package installer for python.
-
-command:-  ``` pip install wheel ```
 
 Wheel is a binary distribution,its a standard for packaging and distribution of python projects
 
-
 2.Setuptools package
-
-command:-  ``` pip install setuptools```
 
 Setuptools is a library in Python that facilitates the packaging, distribution, and installation
 of Python projects.
+
+If these two packages are not preinstalled , install_requires list should include them.
 
 ### Wheel distribution
 
@@ -58,6 +56,7 @@ written functions.
 ### Importing functions 
 
 Model command:- from package.module import function
+Example :- from mypkg.mod1 import sub
 
 From  above command, function is imported from a module in package 
 

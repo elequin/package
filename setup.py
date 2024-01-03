@@ -8,7 +8,7 @@ setup(
     author_email='srikanth_py06@gmail.com',
     packages=find_packages(),
     install_requires=[
-        'SQLAlchemy',
-        'pandas',
+        'wheel',
+        'setuptools'
     ],
 )
