@@ -1,6 +1,7 @@
 
 import sys
-sys.path.append("C:\\Users\\cstech_\\mypkg")
+import os
+sys.path.append(os.path.abspath('mypkg\..\..'))
 from mypkg import mod1
 
 from mypkg.mod1 import sub,func,funct

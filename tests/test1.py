@@ -1,6 +1,8 @@
 # Test case2: Importing  mod2 module
 import sys
-sys.path.append("C:\\Users\\cstech_\\mypkg")
+import os
+sys.path.append(os.path.abspath('mypkg\..\..'))
+
 
 from mypkg.mod2 import sqr, add, divs
 
